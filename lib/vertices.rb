@@ -10,7 +10,7 @@ class Vertex
     reachable_coordinates = calculate_moves
 
     filtered_coordinates = reachable_coordinates.map do |move_array|
-      move_array if (1..7).include?(move_array[0]) && (1..7).include?(move_array[1])
+      move_array if (0..7).include?(move_array[0]) && (0..7).include?(move_array[1])
     end
 
     filtered_coordinates.compact
@@ -29,8 +29,8 @@ class Vertex
   end
 end
 
-vertex = Vertex.new(3, 3) ### possible coordinates [5, 2], [4, 1], [1, 2], [2, 1], [5, 4], [4, 5], [5, 2] and [4, 1]
-p vertex
+# vertex = Vertex.new(3, 3) ### possible coordinates [5, 2], [4, 1], [1, 2], [2, 1], [5, 4], [4, 5], [5, 2] and [4, 1]
+# p vertex
 
-vertex_2 = Vertex.new(0, 7) ## possible coordinates [2, 6] and [1, 5]
+vertex_2 = Vertex.new(2, 1) ## possible coordinates [2, 6] and [1, 5]
 p vertex_2
