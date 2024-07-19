@@ -1,5 +1,5 @@
 class Vertex
-  attr_reader :coordinates
+  attr_reader :coordinates, :reachable_coordinates
 
   def initialize(x, y)
     @coordinates = [x, y]
@@ -28,9 +28,3 @@ class Vertex
     reachable_coordinates << [coordinates[0] + 1, coordinates[1] - 2]
   end
 end
-
-# vertex = Vertex.new(3, 3) ### possible coordinates [5, 2], [4, 1], [1, 2], [2, 1], [5, 4], [4, 5], [5, 2] and [4, 1]
-# p vertex
-
-vertex_2 = Vertex.new(2, 1) ## possible coordinates [2, 6] and [1, 5]
-p vertex_2
